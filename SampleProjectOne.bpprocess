@@ -59,12 +59,25 @@
   </stage>
   <stage stageid="aec86ccc-4af3-45f3-a043-85640f558c1f" name="Addition" type="Calculation">
     <loginhibit onsuccess="true" />
-    <display x="-15" y="150" />
-    <onsuccess>9aa36fcd-9421-4be1-843d-b7aa8f9fb9ac</onsuccess>
+    <display x="-135" y="135" />
+    <onsuccess>cd5cce3c-df40-40a9-8bd2-6ce55629221c</onsuccess>
     <calculation expression="[Sum]+[Sub]+[Multi]" stage="Final" />
   </stage>
   <stage stageid="da766a0a-7b28-45ce-aac1-7241e6f72ee5" name="Final" type="Data">
     <display x="75" y="240" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="cd5cce3c-df40-40a9-8bd2-6ce55629221c" name="Multiplication" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="-60" y="240" />
+    <onsuccess>9aa36fcd-9421-4be1-843d-b7aa8f9fb9ac</onsuccess>
+    <calculation expression="[Final]*20" stage="FinalMulti" />
+  </stage>
+  <stage stageid="510a16c7-3360-4165-94b0-19b7916037c1" name="FinalMulti" type="Data">
+    <display x="15" y="240" />
     <datatype>number</datatype>
     <initialvalue />
     <private />
