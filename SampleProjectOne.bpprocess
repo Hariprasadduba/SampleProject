@@ -1,7 +1,7 @@
 ﻿<process name="SampleProjectOne" version="1.0" bpversion="7.1.2.3518" narrative="Calculation Process" byrefcollection="true" preferredid="d16e4f51-e346-4532-908e-f967cee0e7c9">
   <view>
     <camerax>0</camerax>
-    <cameray>0</cameray>
+    <cameray>135</cameray>
     <zoom version="2">1.25</zoom>
   </view>
   <preconditions />
@@ -47,11 +47,37 @@
   <stage stageid="9f6358da-4e32-44e8-8c48-0a26a48b122b" name="Multiplication" type="Calculation">
     <loginhibit onsuccess="true" />
     <display x="120" y="135" />
-    <onsuccess>9aa36fcd-9421-4be1-843d-b7aa8f9fb9ac</onsuccess>
+    <onsuccess>aec86ccc-4af3-45f3-a043-85640f558c1f</onsuccess>
     <calculation expression="[Sub]*10" stage="Multi" />
   </stage>
   <stage stageid="1aa2d749-f56c-457f-b0b8-b7533c3dfc64" name="Multi" type="Data">
     <display x="195" y="135" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="aec86ccc-4af3-45f3-a043-85640f558c1f" name="Addition" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="-135" y="135" />
+    <onsuccess>cd5cce3c-df40-40a9-8bd2-6ce55629221c</onsuccess>
+    <calculation expression="[Sum]+[Sub]+[Multi]" stage="Final" />
+  </stage>
+  <stage stageid="da766a0a-7b28-45ce-aac1-7241e6f72ee5" name="Final" type="Data">
+    <display x="75" y="240" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="cd5cce3c-df40-40a9-8bd2-6ce55629221c" name="Multiplication" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="-60" y="240" />
+    <onsuccess>9aa36fcd-9421-4be1-843d-b7aa8f9fb9ac</onsuccess>
+    <calculation expression="[Final]*20" stage="FinalMulti" />
+  </stage>
+  <stage stageid="510a16c7-3360-4165-94b0-19b7916037c1" name="FinalMulti" type="Data">
+    <display x="15" y="240" />
     <datatype>number</datatype>
     <initialvalue />
     <private />
