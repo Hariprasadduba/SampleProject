@@ -1,0 +1,47 @@
+﻿<process name="SampleProjectOne" version="1.0" bpversion="7.1.2.3518" narrative="Calculation Process" byrefcollection="true" preferredid="d16e4f51-e346-4532-908e-f967cee0e7c9">
+  <view>
+    <camerax>0</camerax>
+    <cameray>0</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="f4ed2c96-db12-4d5e-a228-214d1fd4e59d" name="Start" type="Start">
+    <display x="15" y="-105" />
+    <onsuccess>5a6adba3-73fa-4b9e-8e59-e137cd085497</onsuccess>
+  </stage>
+  <stage stageid="9aa36fcd-9421-4be1-843d-b7aa8f9fb9ac" name="End" type="End">
+    <display x="15" y="90" />
+  </stage>
+  <stage stageid="07eb2fc6-ae0a-4511-8ae6-20ac9ffb72e5" name="Stage1" type="ProcessInfo">
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="5a6adba3-73fa-4b9e-8e59-e137cd085497" name="Addition" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="0" />
+    <onsuccess>a7810c09-6122-4777-a049-65f4f40a6021</onsuccess>
+    <calculation expression="50+100" stage="Sum" />
+  </stage>
+  <stage stageid="1b22730d-89bd-4954-aa65-344a01393183" name="Sum" type="Data">
+    <loginhibit onsuccess="true" />
+    <narrative>Description</narrative>
+    <display x="120" y="0" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="a7810c09-6122-4777-a049-65f4f40a6021" name="Subtraction" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="120" y="75" />
+    <onsuccess>9aa36fcd-9421-4be1-843d-b7aa8f9fb9ac</onsuccess>
+    <calculation expression="[Sum]-20" stage="Sub" />
+  </stage>
+  <stage stageid="66252bc7-abe1-4f43-bad2-82e5e312875c" name="Sub" type="Data">
+    <display x="195" y="75" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+</process>
